@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="s001" class="nought.one.basics.Student">
+		<property name="iName" value="Donald Trump"></property>
+	</bean>
+
+	<bean id="s002" class="nought.one.basics.Student">
+		<property name="iName" value="Jhonsy Rani"></property>
+	</bean>
+
+	<bean id="s003" class="nought.one.basics.Student">
+		<property name="iName" value="Vimal Jaiswal"></property>
+	</bean>
+
+	<bean id="c001" class="nought.two.constructor.Car">
+		<constructor-arg value="65879" type="int"></constructor-arg>
+		<constructor-arg value="nano" type=""></constructor-arg>
+	</bean>
+
+<!-- 	<bean id="c000" class="nought.two.constructor.Car"> -->
+<!-- 	</bean> -->
+
+</beans>
