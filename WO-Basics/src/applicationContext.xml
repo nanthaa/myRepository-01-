@@ -21,7 +21,86 @@
 		<constructor-arg value="nano" type=""></constructor-arg>
 	</bean>
 
-<!-- 	<bean id="c000" class="nought.two.constructor.Car"> -->
-<!-- 	</bean> -->
+	<!-- <bean id="c000" class="nought.two.constructor.Car"> -->
+	<!-- </bean> -->
+
+	<bean id="cio-000" class="nought.three.object.Address">
+		<constructor-arg value="Palakkarai" type="String"></constructor-arg>
+		<constructor-arg value="Trichy" type="String"></constructor-arg>
+		<constructor-arg value="TamilNadu" type="String"></constructor-arg>
+	</bean>
+
+	<bean id="cio-001" class="nought.three.object.Employee">
+		<constructor-arg value="198" type="int"></constructor-arg>
+		<constructor-arg value="NanthaKumar" type="String"></constructor-arg>
+		<constructor-arg>
+			<ref bean="cio-000" />
+		</constructor-arg>
+	</bean>
+
+	<bean id="is-001" class="nought.four.collection.IndianStates">
+		<constructor-arg value="28" type="int"></constructor-arg>
+		<constructor-arg value="TamilNadu" type="String"></constructor-arg>
+		<constructor-arg>
+			<list>
+				<value>Chennai</value>
+				<value>Madurai</value>
+				<value>Trichy</value>
+				<value>Kovai</value>
+			</list>
+		</constructor-arg>
+	</bean>
+
+
+	<bean id="ans-001" class="nought.four.collection.Answer">
+		<constructor-arg value="01" type="int"></constructor-arg>
+		<constructor-arg value="Java Is Robust" type="String"></constructor-arg>
+		<constructor-arg value="By Nanthaa" type="String"></constructor-arg>
+	</bean>
+
+	<bean id="ans-002" class="nought.four.collection.Answer">
+		<constructor-arg value="02" type="int"></constructor-arg>
+		<constructor-arg value="Java Is OOPs concepts" type="String"></constructor-arg>
+		<constructor-arg value="By Riyaz" type="String"></constructor-arg>
+	</bean>
+
+	<bean id="ans-003" class="nought.four.collection.Answer">
+		<constructor-arg value="03" type="int"></constructor-arg>
+		<constructor-arg value="Java Is Multithreading" type="String"></constructor-arg>
+		<constructor-arg value="By Anand" type="String"></constructor-arg>
+	</bean>
+
+	<bean id="ans-004" class="nought.four.collection.Answer">
+		<constructor-arg value="04" type="int"></constructor-arg>
+		<constructor-arg value="Java Is Robust" type="String"></constructor-arg>
+		<constructor-arg value="By Laxmann" type="String"></constructor-arg>
+	</bean>
+
+	<bean id="que-001" class="nought.four.collection.Question">
+		<constructor-arg value="101" type="int"></constructor-arg>
+		<constructor-arg value="SCJP/OCJP - 64"></constructor-arg>
+		<constructor-arg>
+			<list>
+				<ref bean="ans-001" />
+				<ref bean="ans-002" />
+				<ref bean="ans-003" />
+				<ref bean="ans-004" />
+			</list>
+		</constructor-arg>
+	</bean>
+
+
+	<bean id="map-001" class="nought.five.map.QuestionStringString">
+		<constructor-arg value="11"></constructor-arg>
+		<constructor-arg value="What is Java?"></constructor-arg>
+		<constructor-arg>
+			<map>
+				<entry key="Java is a Programming Language" value="Ajay Kumar"></entry>
+				<entry key="Java is a Platform" value="John Smith"></entry>
+				<entry key="Java is an Island" value="Raj Kumar"></entry>
+			</map>
+		</constructor-arg>
+	</bean>
+
 
 </beans>
