@@ -7,7 +7,6 @@ import org.springframework.core.io.Resource;
 
 public class Test
 {
-
 	public static void main(String[] args)
 	{
 		Resource r = new ClassPathResource("applicationContextMap.xml");
