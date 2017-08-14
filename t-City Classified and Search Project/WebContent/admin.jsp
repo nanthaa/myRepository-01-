@@ -64,7 +64,7 @@
 						<table>
 							<tbody>
 								<tr>
-									<td>&nbsp;Admin name<br '/></td>
+									<td>&nbsp;Admin name<br /></td>
 									<td>&nbsp;<input type="text" name="username" /></td>
 								</tr>
 								<tr>
@@ -73,7 +73,7 @@
 								</tr>
 
 								<tr>
-									<td valign="top"><br></td>
+									<td valign="top"><br /></td>
 									<td valign="top"><input type="submit" value="login"
 										name="button1"></td>
 								</tr>
@@ -127,15 +127,4 @@
 	<!-- end #footer -->
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
 

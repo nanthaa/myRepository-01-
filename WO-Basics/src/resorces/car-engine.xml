@@ -1,0 +1,12 @@
+	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+		"http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean class="one.one.secondary.Car" id="c">
+		<property name="carname" value="BMW"></property>
+		<property name="engine">
+			<bean class="one.one.secondary.Engine">
+				<property name="modelyear" value="2021"></property>
+			</bean>
+		</property>
+	</bean>
+</beans>
