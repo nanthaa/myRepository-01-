@@ -12,9 +12,10 @@ public class MyListener implements ServletContextListener
 		Connection con = null;
 		try
 		{
+
 			ResultSet rs;
-			Class.forName("oracle.jdbc.driver.OracleDriver");
-			con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", "oracle");
+			Class.forName("com.mysql.jdbc.Driver");
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/DB_quiz", "root", "data");
 
 			PreparedStatement ps1 = con.prepareStatement("Select * from QUIZCONTACT");
 
@@ -27,7 +28,7 @@ public class MyListener implements ServletContextListener
 			{
 				System.out.println("else if part table does not exist new table has created");
 
-				PreparedStatement ps2 = con.prepareStatement(
+/*				PreparedStatement ps2 = con.prepareStatement(
 						"CREATE SEQUENCE JAVATPOINT MINVALUE 1 MAXVALUE 999999999 INCREMENT BY 1 START WITH 1 NOCACHE NOORDER NOCYCLE");
 				ps2.executeUpdate();
 				PreparedStatement ps = con.prepareStatement(
@@ -48,14 +49,15 @@ public class MyListener implements ServletContextListener
 				ps5 = con.prepareStatement(
 						"CREATE TABLE  QUIZREGISTER (USERNAME VARCHAR2(4000),USERPASS VARCHAR2(4000),CATEGORY VARCHAR2(4000),EMAIL VARCHAR2(4000))");
 				ps5.executeUpdate();
+				
 				Statement stmt = con.createStatement();
 				stmt.executeUpdate(
 						"CREATE TRIGGER  BI_QUIZINFO before insert on QUIZINFO for each row begin select JAVATPOINT.nextval into :NEW.QUIZNAME from dual;end");
 				stmt.executeUpdate(
 						"CREATE TRIGGER  BI_QUIZQUES before insert on QUIZQUES for each row begin select JAVATPOINT.nextval into :NEW.QID from dual;end");
+						*/
 			}
 		}
-
 		catch (Exception e)
 		{
 			e.printStackTrace();

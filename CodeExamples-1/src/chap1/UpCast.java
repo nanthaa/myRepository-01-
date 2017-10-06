@@ -8,8 +8,8 @@ public class UpCast
 		ClassP cp = new SubClass(); // UpCasst
 		((SubClass) cp).method(); // DownCast!
 
-		Object obj = new SubClass(); // UpCasst
-		((SubClass) obj).method(); // DownCast!
+		// Object obj = new SubClass(); // UpCasst
+		// ((SubClass) obj).method(); // DownCast!
 
 	}
 }

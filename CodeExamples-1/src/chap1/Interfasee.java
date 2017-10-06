@@ -2,7 +2,6 @@ package chap1;
 
 public class Interfasee
 {
-
 	public static void main(String[] argv)
 	{
 
@@ -22,7 +21,6 @@ public class Interfasee
 		ssi.method();
 
 	}
-
 }
 
 interface SimpleInterface
