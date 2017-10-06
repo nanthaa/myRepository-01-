@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>XampleWeb-1</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>StudentServlet</servlet-name>
+		<servlet-class>com.controller.StudentServlet</servlet-class>
+		<init-param>
+			<param-name>username</param-name>
+			<param-value>roja</param-value>
+		</init-param>
+		<init-param>
+			<param-name>username</param-name>
+			<param-value>nanthaa</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>StudentServlet</servlet-name>
+		<url-pattern>/ss</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>StudentRegServlet</servlet-name>
+		<servlet-class>com.controller.StudentRegServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>StudentRegServlet</servlet-name>
+		<url-pattern>/Stdreg</url-pattern>
+	</servlet-mapping>
+	<filter>
+		<display-name>ValidationFilter</display-name>
+		<filter-name>vFilter</filter-name>
+		<filter-class>com.controller.ValidationFilter</filter-class>
+		<init-param>
+			<param-name>Key</param-name>
+			<param-value>MyFilter01</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>vFilter</filter-name>
+		<url-pattern>/Stdreg</url-pattern>
+	</filter-mapping>
+
+	<servlet>
+		<servlet-name>AjaxServlet</servlet-name>
+		<servlet-class>com.controller.AjaxServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AjaxServlet</servlet-name>
+		<url-pattern>/reg</url-pattern>
+	</servlet-mapping>
+</web-app>

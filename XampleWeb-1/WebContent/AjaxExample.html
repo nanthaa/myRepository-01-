@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="./reg">
+		<pre>
+	Name :		<input type="text" name="name" id="name">	
+	Email :		<input type="text" name="email" id="email"> 
+	Address : 	<textarea rows="5" cols="15" name="address" id="address"> </textarea>
+				<input type="submit" value="Register" id="myButton">
+	</pre>
+	</form>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			alert("on load alert");
+			$('#myButton').click(function(event) {
+				alert("on click alert");
+				var name = $('name').val();
+				var email = $('email').val();
+				var address = $('address').val();
+
+				$.ajax({
+					type : 'GET',
+					url : 'reg',
+					data : "name=" + name + "&email=" + email + "&address=",
+					success : function(msg) {
+						alert("success");
+					},
+					error : function(e) {
+						alert("error");
+					},
+				})
+			});
+		});
+	</script>
+</body>
+</html>
